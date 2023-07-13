@@ -4,7 +4,8 @@
 
 CREATE INDEX IDX_PRODUCT ON TELECOM("PRODUCT"); WHICH WAS IMPLIMENTED INTERNALLY IN THE PRODUCTS COLUMN and 
 alternative method like '%' can also be used */
-SET TIMING ON
+SET TIMING ON;
+CREATE INDEX FA ON TELECOM(product,"Customer Name","Service Segment",zone);
 SELECT "Customer Name" FROM TELECOM
 WHERE PRODUCT='Digital Subscriber Line';
 
