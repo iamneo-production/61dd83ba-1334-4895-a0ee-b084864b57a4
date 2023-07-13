@@ -1,5 +1,5 @@
 /* 
-1st list of customer names who are using product Digital Subscriber Line
+1ST QUESTION IS, WRITE A SQL QUERY TO LIST OF CUSTOMER NAMES WHO ARE USING PRODUCT DIGITAL SUBSCRIBER LINE?
 
 CREATE INDEX IDX_PRODUCT ON TELECOM("PRODUCT"); WHICH WAS IMPLIMENTED INTERNALLY IN THE PRODUCTS COLUMN and 
 alternative method like '%' can also be used
@@ -11,7 +11,7 @@ WHERE PRODUCT='Digital Subscriber Line';
 
 
 
-/* 2ND QUESTION SQL QUERY TO LIST CUSTOMER_ID AND NAME */
+/* 2ND QUESTION IS, WRITE A SQL QUERY TO LIST CUSTOMER_ID AND NAME? */
 /* optimized approach
 CREATE INDEX IDX_CUSTOMER_NAME ON TELECOM("Customer Name");*/
 SELECT CUSTOMERID, "Customer Name" FROM TELECOM
@@ -21,7 +21,7 @@ WHERE "Customer Name" LIKE 'sa%';
 
 
 
-/* 3rd SQL Query to list the customer IDs and names for customers belonging to the gold customer segment 
+/* 3RD QUESTION IS, WRITE A SQL QUERY TO LIST CUSTOMER IDS AND NAMES FOR CUSTOMERS BELONGING TO THE GOLD CUSTOMER SEGMENT?
 There is no gold word in Customer Segment. It is present in Service segment.
 CREATE INDEX IDX_Service_SEGMENT ON TELECOM("Service Segment"); indexing
 SELECT CUSTOMERID, "Service Segment" FROM TELECOM;
@@ -32,7 +32,7 @@ SELECT CUSTOMERID, "Customer Name" FROM TELECOM
 WHERE "Service Segment"='Gold';
 
 
-/*4th Write a SQL Query to Count the Customer list product-wise? */
+/*4TH QUESTION IS, WRITE A SQL QUERY TO COUNT THE CUSTOMER LIST PRODUCT-WISE?*/
 
 select product, count(*) as count from telecom 
 group by product;
