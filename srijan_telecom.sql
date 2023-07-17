@@ -15,3 +15,9 @@ Mentioned below is the query accordingly.
 */
 select CUSTOMERID, "Customer Name" from TELECOM_CUSTOMER where "Service Segment" = 'Gold';
 
+/* 
+4. Write a SQL Query to Count the Customer list product-wise.
+*/
+select product , count(*) as count from TELECOM_CUSTOMER group by product;
+
+
