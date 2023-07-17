@@ -20,4 +20,7 @@ select CUSTOMERID, "Customer Name" from TELECOM_CUSTOMER where "Service Segment"
 */
 select product , count(*) as count from TELECOM_CUSTOMER group by product;
 
-
+/*
+5. Write a SQL Query to list the Customer name of zone Mountain
+*/
+select "Customer Name" from TELECOM_CUSTOMER where ZONE like 'M%';
