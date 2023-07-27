@@ -1,4 +1,4 @@
-/*SQL query to find a list of customer names who are using the product digital subscriber line */ 
+a/*SQL query to find a list of customer names who are using the product digital subscriber line */ 
 SELECT "Customer Name" FROM TELECOM_CUSTOMER
 WHERE PRODUCT='Digital Subscriber Line';
 
