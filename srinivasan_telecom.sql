@@ -5,17 +5,15 @@
 CREATE INDEX IDX_PRODUCT ON TELECOM("PRODUCT"); WHICH WAS IMPLIMENTED INTERNALLY IN THE PRODUCTS COLUMN and 
 alternative method like '%' can also be used */
 SET TIMING ON;
-CREATE INDEX FA ON TELECOM(product,"Customer Name","Service Segment",zone);
-SELECT "Customer Name" FROM TELECOM
+SELECT "Customer Name" FROM TELECOM_CUSTOMER
 WHERE PRODUCT='Digital Subscriber Line';
 
 
 
 
-/* 2ND QUESTION SQL QUERY TO LIST CUSTOMER_ID AND NAME */
 /* optimized approach
 CREATE INDEX IDX_CUSTOMER_NAME ON TELECOM("Customer Name");*/
-SELECT CUSTOMERID, "Customer Name" FROM TELECOM
+SELECT CUSTOMERID, "Customer Name" FROM TELECOM_CUSTOMER
 WHERE "Customer Name" LIKE 'sa%';
 
 
@@ -26,17 +24,16 @@ WHERE "Customer Name" LIKE 'sa%';
 After analysing the table from the data base there is no customer segment such as gold, but the gold is present in service segment 
 column. question is inappropriate.
 CREATE INDEX IDX_Service_SEGMENT ON TELECOM("Service Segment"); indexing
-SELECT CUSTOMERID, "Service Segment" FROM TELECOM;
 
 */
 
-SELECT CUSTOMERID, "Customer Name" FROM TELECOM
+SELECT CUSTOMERID, "Customer Name" FROM TELECOM_CUSTOMER
 WHERE "Service Segment"='Gold';
 
 
-/*4th Write a SQL Query to Count the Customer list product-wise? */
 
-select product, count(*) as count from telecom 
+
+select product, count(*) as count from TELECOM_CUSTOMER
 group by product;
 
 /*5.Write a SQL Query to List the Customer name of zone 'Mountain'?
@@ -49,6 +46,6 @@ where ZONE= 'Mountain'
 not working
 0 rows selected*/
 
-select "Customer Name" from telecom
+select "Customer Name" from TELECOM_CUSTOMER
 where ZONE like'M%';
 
