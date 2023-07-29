@@ -1,4 +1,4 @@
-/*1Q)Write a SQL query to find a list of customer names who are using the product Digital Subscriber Line .*/
+/*1Q)Write a SQL query to find a list of customer names who are using the product Digital Subscriber Line.*/
 SELECT "Customer Name" FROM TELECOM_CUSTOMER WHERE PRODUCT='Digital Subscriber Line';
 
 /*2Q)Write a SQL query to list a customer id,customer name whose name starts with 'sa'.*/
