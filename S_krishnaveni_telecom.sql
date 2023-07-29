@@ -13,5 +13,5 @@ SELECT PRODUCT,COUNT(PRODUCT) FROM TELECOM GROUP BY PRODUCT;
 /*5Q)Write a SQL query to list the customer name zone 'Mountain'.
 comment:SELECT "Customer Name" FROM TELECOM WHERE ZONE='Mountain'
 its showing 0 rows selected
-after discussing it with the team i came to the below approach */
+after discussing it with the team we came to the below approach */
 SELECT "Customer Name" FROM TELECOM WHERE ZONE LIKE 'M%';
