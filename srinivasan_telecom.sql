@@ -12,8 +12,7 @@ WHERE PRODUCT='Digital Subscriber Line';
 
 
 
-/* 2ND QUESTION SQL QUERY TO LIST CUSTOMER_ID AND NAME */
-/* optimized approach
+/* 2ND QUESTION SQL QUERY TO LIST CUSTOMER_ID AND NAME optimized approach
 CREATE INDEX IDX_CUSTOMER_NAME ON TELECOM("Customer Name");*/
 SELECT CUSTOMERID, "Customer Name" FROM TELECOM
 WHERE "Customer Name" LIKE 'sa%';
@@ -25,16 +24,13 @@ WHERE "Customer Name" LIKE 'sa%';
 /* 3rd SQL Query to list the customer IDs and names for customers belonging to the gold customer segment 
 After analysing the table from the data base there is no customer segment such as gold, but the gold is present in service segment 
 column. question is inappropriate.
-CREATE INDEX IDX_Service_SEGMENT ON TELECOM("Service Segment"); indexing
-SELECT CUSTOMERID, "Service Segment" FROM TELECOM;
-
 */
 
 SELECT CUSTOMERID, "Customer Name" FROM TELECOM
 WHERE "Service Segment"='Gold';
 
 
-/*4th Write a SQL Query to Count the Customer list product-wise? */
+
 
 select product, count(*) as count from telecom 
 group by product;
