@@ -49,3 +49,4 @@ not working
 select "Customer Name" from TELECOM_CUSTOMER
 where ZONE like'M%';
 
+
